@@ -23,6 +23,7 @@ const mongoose_1 = __importStar(require("mongoose"));
 //{ date : "2020131", title : "test2", imgList : "", content : "아아2" } 
 const detailSchema = new mongoose_1.Schema({
     // required : 꼭 입력해야 한다. 
+    seq: { type: Number, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
     fileForm: { type: String, required: true },

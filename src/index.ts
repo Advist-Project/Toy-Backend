@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 // ..이면 그 파일이 있던 폴더의 폴더로
 import config from './config/config';
 import diaryRoutes from './routes/diary';
-import detailRoutes from './routes/bookDetail';
+import bookRoutes from './routes/book';
 
 const app = express();
 app.use(express.json())
@@ -39,7 +39,7 @@ app.get("/", (req : express.Request , res : express.Response, next : express.Nex
 
 // 라우터를 사용해보자
 app.use('/diary', diaryRoutes);
-app.use('/book', detailRoutes);
+app.use('/book', bookRoutes);
 app.use((req : express.Request , res : express.Response, next : express.NextFunction) => {
        const error = new Error('Not Found');
        res.status(404).json({

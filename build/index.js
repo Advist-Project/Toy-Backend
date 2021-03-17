@@ -10,7 +10,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 // ..이면 그 파일이 있던 폴더의 폴더로
 const config_1 = __importDefault(require("./config/config"));
 const diary_1 = __importDefault(require("./routes/diary"));
-const bookDetail_1 = __importDefault(require("./routes/bookDetail"));
+const book_1 = __importDefault(require("./routes/book"));
 const app = express_1.default();
 app.use(express_1.default.json());
 //mongoose 연결
@@ -35,7 +35,7 @@ app.get("/", (req, res, next) => {
 });
 // 라우터를 사용해보자
 app.use('/diary', diary_1.default);
-app.use('/book', bookDetail_1.default);
+app.use('/book', book_1.default);
 app.use((req, res, next) => {
     const error = new Error('Not Found');
     res.status(404).json({
