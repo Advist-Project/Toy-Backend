@@ -33,8 +33,8 @@ const createDiary = (req : Request, res : Response, next : NextFunction) => {
 }
 
 const getAllDiarys = (req: Request, res: Response, next : NextFunction) => {
-    // Diary.find()
-    Diary.findOne({title : req.params.title})
+    Diary.find()
+    // Diary.findOne({title : req.params.title})
     .exec()
     .then(results => {
         // 200-> 성공 했다면
@@ -42,7 +42,7 @@ const getAllDiarys = (req: Request, res: Response, next : NextFunction) => {
             // results(Diary.find())를 diarys 라는 이름으로 보냄
             diarys : results,
             // results의 개수를 count라는 이름으로 보냄
-            // count : results.length
+            count : results.length
         });
     })
     .catch((error) => {
