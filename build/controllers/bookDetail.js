@@ -8,14 +8,14 @@ const getBookDetail = (req, res, next) => {
     bookDetail_1.default.findOne({ title: req.params.title })
         .exec()
         .then(results => {
-        // 200-> ���� �ߴٸ�
+        // 200-> 성공 했다면
         return res.status(200).json({
             detail: results
         });
     })
         .catch((error) => {
         return res.status(500).json({
-            // message�� ���� �޼����� �־ ������
+            // message에 에러 메세지를 넣어서 보낸다
             message: error.message,
             error
         });

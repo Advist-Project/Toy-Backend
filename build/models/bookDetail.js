@@ -20,15 +20,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-//{ date : "2020131", title : "test2", imgList : "", content : "�ƾ�2" } 
+//{ date : "2020131", title : "test2", imgList : "", content : "아아2" } 
 const detailSchema = new mongoose_1.Schema({
-    // required : �� �Է��ؾ� �Ѵ�. 
+    // required : 꼭 입력해야 한다. 
     title: { type: String, required: true },
     description: { type: String, required: true },
     fileForm: { type: String, required: true },
     owner: { type: String, required: true },
     ownerIcon: { type: String, required: true }
 });
-// interface ������ Diary�� Diary��Ű���� �ִ´�(���Ǵ� ���� diarySchema) 
+// interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) 
 exports.default = mongoose_1.default.model('Detail', detailSchema);
 //# sourceMappingURL=bookDetail.js.map
