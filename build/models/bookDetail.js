@@ -25,6 +25,7 @@ const detailSchema = new mongoose_1.Schema({
     // required : 꼭 입력해야 한다. 
     seq: { type: Number, required: true },
     title: { type: String, required: true },
+    price: { type: Number, required: true },
     description: { type: String, required: true },
     fileForm: { type: String, required: true },
     owner: { type: String, required: true },
