@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const book_1 = __importDefault(require("../models/book"));
 const bookDetail_1 = __importDefault(require("../models/bookDetail"));
 const bookComment_1 = __importDefault(require("../models/bookComment"));
+const payprocess_1 = __importDefault(require("../models/payprocess"));
 const getBook = (req, res, next) => {
     book_1.default.find()
         .exec()
@@ -57,5 +58,22 @@ const getBookComment = (req, res, next) => {
         });
     });
 };
-exports.default = { getBook, getBookDetail, getBookComment };
+const postPayProcess = (req, res, next) => {
+    payprocess_1.default.find({ email: req.params.email })
+        .exec()
+        .then(results => {
+        // 200-> 성공 했다면
+        return res.status(200).json({
+            payprocess: results
+        });
+    })
+        .catch((error) => {
+        return res.status(500).json({
+            // message에 에러 메세지를 넣어서 보낸다
+            message: error.message,
+            error
+        });
+    });
+};
+exports.default = { getBook, getBookDetail, getBookComment, postPayProcess };
 //# sourceMappingURL=book.js.map

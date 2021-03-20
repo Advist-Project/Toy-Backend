@@ -8,5 +8,6 @@ const router = express_1.default.Router();
 router.get('/', book_1.default.getBook);
 router.get('/details/:seq', book_1.default.getBookDetail);
 router.get('/comments/:seq', book_1.default.getBookComment);
+router.get('/payment/:email', book_1.default.postPayProcess);
 module.exports = router;
 //# sourceMappingURL=book.js.map
