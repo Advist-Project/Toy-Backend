@@ -29,6 +29,6 @@ const bookSchema = new mongoose_1.Schema({
     price: { type: Number, required: true },
     bookImg: { type: String, required: true }
 });
-// interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) 
+// interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) -> books
 exports.default = mongoose_1.default.model('Book', bookSchema);
 //# sourceMappingURL=book.js.map

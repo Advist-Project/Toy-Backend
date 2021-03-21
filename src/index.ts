@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 import config from './config/config';
 import diaryRoutes from './routes/diary';
 import bookRoutes from './routes/book';
+import userRoutes from "./routes/user"
 
 const app = express();
 app.use(express.json())
@@ -40,6 +41,7 @@ app.get("/", (req : express.Request , res : express.Response, next : express.Nex
 // 라우터를 사용해보자
 app.use('/diary', diaryRoutes);
 app.use('/book', bookRoutes);
+app.use('/user', userRoutes);
 app.use((req : express.Request , res : express.Response, next : express.NextFunction) => {
        const error = new Error('Not Found');
        res.status(404).json({

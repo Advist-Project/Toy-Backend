@@ -2,10 +2,10 @@ import {Document} from 'mongoose';
 
 export default interface Detail extends Document {
     seq : Number,
-    title : String, 
+    title : string, 
     price : Number,
-    description : String,
-    fileForm : String,
-    owner : String,
-    ownerIcon : String
+    description : string,
+    fileForm : string,
+    owner : string,
+    ownerIcon : string
 }

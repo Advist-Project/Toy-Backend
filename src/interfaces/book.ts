@@ -2,8 +2,8 @@ import {Document} from 'mongoose';
 
 export default interface Book extends Document {
     seq : Number,
-    bookTitle : String, 
-    desc : String,
+    bookTitle : string, 
+    desc : string,
     price : Number,
-    bookImg : String
+    bookImg : string
 }

@@ -14,5 +14,5 @@ const bookSchema : Schema = new Schema( {
 });
 
 
-// interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) 
+// interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) -> books
 export default mongoose.model<Book>('Book', bookSchema);

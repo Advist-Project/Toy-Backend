@@ -39,6 +39,7 @@ const SERVER = {
 config = {
     mongo : MONGO,
     server : SERVER
+
 };
 
 export default config;

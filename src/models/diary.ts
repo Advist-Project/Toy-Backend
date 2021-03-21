@@ -16,7 +16,7 @@ const dairySchema : Schema = new Schema( {
 // 이벤트를 주는 것-스키마에 붙는 함수
 // pre : ''하기 전
 // post : '' 한 후
-dairySchema.post<Diary>('save', function(this : Diary) {
+dairySchema.post<Diary>('save', function() {
     this.extraInformation = "처음 등록하고 내용을 수정한 적 있음";
 })
 // interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) 

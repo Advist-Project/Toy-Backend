@@ -14,6 +14,5 @@ const commentSchema : Schema = new Schema( {
 });
 
 
-
 // interface 형식이 Diary를 Diary스키마에 넣는다(정의는 위에 diarySchema) 
 export default mongoose.model<Comment>('Comment', commentSchema);

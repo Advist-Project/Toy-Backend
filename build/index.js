@@ -11,6 +11,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = __importDefault(require("./config/config"));
 const diary_1 = __importDefault(require("./routes/diary"));
 const book_1 = __importDefault(require("./routes/book"));
+const user_1 = __importDefault(require("./routes/user"));
 const app = express_1.default();
 app.use(express_1.default.json());
 //mongoose 연결
@@ -36,6 +37,7 @@ app.get("/", (req, res, next) => {
 // 라우터를 사용해보자
 app.use('/diary', diary_1.default);
 app.use('/book', book_1.default);
+app.use('/user', user_1.default);
 app.use((req, res, next) => {
     const error = new Error('Not Found');
     res.status(404).json({
