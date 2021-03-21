@@ -7,5 +7,6 @@ export default interface Detail extends Document {
     description : string,
     fileForm : string,
     owner : string,
-    ownerIcon : string
+    ownerIcon : string,
+    bookImg : string
 }
