@@ -9,6 +9,7 @@ Typescript+Mongoose로 만들어보는 쇼핑몰 페이지(크몽 참고)!!
 - 실행
 
 ```bash
+npm install
 npm start
 ```
 
