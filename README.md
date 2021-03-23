@@ -2,7 +2,7 @@
 
 Typescript+Mongoose로 만들어보는 쇼핑몰 페이지(크몽 참고)
 
-게시판 API, 결제  API(BootPay), 로그인 API, Heroku, Mongodb
+게시판 API, 결제  API(BootPay), 로그인 API, Heroku, Mongodb(Mongoose)
 
 ## 👉**Getting Started**
 
